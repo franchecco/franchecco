@@ -1,3 +1,3 @@
-# franchecco.github.io
+# franchecco
 
 Ciao mi chiamo Francesco
