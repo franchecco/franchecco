@@ -1,38 +1,55 @@
-/*
- JS to toggle scroll axis styles
-*/
+class Example {
+  constructor(options) {
+    this.root = options.root;
 
-/*A Pen created on CodePen.io. Original URL: [https://codepen.io/hexagoncircle/pen/wvmjomb](https://codepen.io/hexagoncircle/pen/wvmjomb).*/
-/*
-const control = document.getElementById("direction-toggle");
-const marquees = document.querySelectorAll(".marquee");
-const wrapper = document.querySelector(".wrapper");
+    this.init();
 
-control.addEventListener("click", () => {
-  control.classList.toggle("toggle--vertical");
-  wrapper.classList.toggle("wrapper--vertical");
-  [...marquees].forEach((marquee) =>
-    marquee.classList.toggle("marquee--vertical")
-  );
-});*/
+    setTimeout(this.showImages.bind(this), 1000);
+  }
 
-//add a function that change a class when window shrink
+  init() {
+    this.scroll = new LocomotiveScroll({
+      el: this.root,
+      direction: 'horizontal',
+      smooth: true,
+      lerp: 0.05,
+      tablet: {
+        smooth: true },
 
-/*var width= (window.innerWidth>0)? window.innerWidth: screen.width;
-if(width<600){
-    control.classList.toggle("toggle--vertical");
-  wrapper.classList.toggle("wrapper--vertical");
-  [...marquees].forEach((marquee) =>
-    marquee.classList.toggle("marquee--vertical")
-  );
-};*/
+      smartphone: {
+        smooth: true } });
 
-/*window.addEventListener("resize", () => {
-    if(window.innerWidth<600){
-      control.classList.toggle("toggle--vertical");
-      wrapper.classList.toggle("wrapper--vertical");
-      [...marquees].forEach((marquee) =>
-        marquee.classList.toggle("marquee--vertical")
-      );
-    }
-  });*/
+
+
+    this.images = this.root.querySelectorAll('.image');
+
+    [].forEach.call(this.images, image => {
+      image.addEventListener('click', () => {
+        image.classList.add('-clicked');
+        this.hideImages();
+      });
+    });
+  }
+
+  showImages() {
+    [].forEach.call(this.images, image => {
+      image.classList.remove('-clicked');
+      image.classList.add('-active');
+    });
+  }
+
+  hideImages() {
+    [].forEach.call(this.images, image => {
+      image.classList.remove('-active');
+    });
+
+    setTimeout(this.showImages.bind(this), 2000);
+  }}
+
+
+
+window.addEventListener('DOMContentLoaded', event => {
+  const example = new Example({
+    root: document.querySelector('.scroll-animations-example') });
+
+});
