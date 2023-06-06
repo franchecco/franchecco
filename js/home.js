@@ -1,6 +1,9 @@
 /*
  JS to toggle scroll axis styles
 */
+
+/*A Pen created on CodePen.io. Original URL: [https://codepen.io/hexagoncircle/pen/wvmjomb](https://codepen.io/hexagoncircle/pen/wvmjomb).*/
+/*
 const control = document.getElementById("direction-toggle");
 const marquees = document.querySelectorAll(".marquee");
 const wrapper = document.querySelector(".wrapper");
@@ -11,7 +14,7 @@ control.addEventListener("click", () => {
   [...marquees].forEach((marquee) =>
     marquee.classList.toggle("marquee--vertical")
   );
-});
+});*/
 
 //add a function that change a class when window shrink
 
