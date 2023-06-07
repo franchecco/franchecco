@@ -18,14 +18,14 @@ class Example {
       direction: 'horizontal',
       smooth: true,
       lerp: 0.05,
-        smooth: true },
+      },
 
       smartphone: {
         el: this.root,
       direction: 'horizontal',
       smooth: true,
       lerp: 0.05,
-        smooth: true } });
+    } });
 
 
 

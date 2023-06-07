@@ -116,9 +116,14 @@ body {
   position: fixed;
   top: 2vh;
   left: 2vh;
-  height: 3vh;
-  width: 2.5vh;
-  border: solid 1vh #999;
+  height: 6vh;
+  width: 6vh;
+  /*border: solid 1vh #999;*/
+}
+.fake-ui > .logo > svg{
+  height: 100%;
+  width: 100%;
+  fill: #555;
 }
 .fake-ui > .nav {
   position: fixed;
