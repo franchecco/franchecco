@@ -13,6 +13,7 @@ class Example {
       direction: 'horizontal',
       smooth: true,
       lerp: 0.05,
+      gestureDirection: 'both',
       tablet: {
         el: this.root,
       direction: 'horizontal',
