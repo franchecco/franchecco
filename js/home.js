@@ -4,7 +4,7 @@ class Example {
 
     this.init();
 
-    setTimeout(this.showImages.bind(this), 1000);
+    setTimeout(this.showImages.bind(this), 700);
   }
 
   init() {
@@ -16,11 +16,13 @@ class Example {
       tablet: {
         el: this.root,
       direction: 'horizontal',
+      gestureDirection: 'both',
       smooth: true,
       lerp: 0.05,
-      },
-
-      smartphone: {
+    },
+    
+    smartphone: {
+        gestureDirection: 'both',
         el: this.root,
       direction: 'horizontal',
       smooth: true,
@@ -58,6 +60,6 @@ class Example {
 
 window.addEventListener('DOMContentLoaded', event => {
   const example = new Example({
-    root: document.querySelector('.scroll-animations-example') });
+    root: document.querySelector('.scroll-animations') });
 
 });

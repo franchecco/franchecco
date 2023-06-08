@@ -6,60 +6,60 @@ body {
 body {
   overflow: hidden;
 }
-.scroll-animations-example > .scrollsection {
+.scroll-animations > .scrollsection {
   padding: 10vh 10vh 10vh 10vmax;
   min-width: 550vh;
 }
-.scroll-animations-example > .scrollsection > .item {
+.scroll-animations > .scrollsection > .item {
   display: inline-block;
   position: relative;
   margin: 0 -30vh 0 3vh;
 }
-.scroll-animations-example > .scrollsection > .item::before {
+.scroll-animations > .scrollsection > .item::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-.scroll-animations-example > .scrollsection > .item.-big {
+.scroll-animations > .scrollsection > .item.-big {
   height: 80vh;
   width: 60vh;
 }
-.scroll-animations-example > .scrollsection > .item.-big.-horizontal {
+.scroll-animations > .scrollsection > .item.-big.-horizontal {
   height: 60vh;
   width: 80vh;
 }
-.scroll-animations-example > .scrollsection > .item.-normal {
+.scroll-animations > .scrollsection > .item.-normal {
   height: 60vh;
   width: 45vh;
   z-index: 1;
 }
-.scroll-animations-example > .scrollsection > .item.-normal.-horizontal {
+.scroll-animations > .scrollsection > .item.-normal.-horizontal {
   height: 45vh;
   width: 60vh;
 }
-.scroll-animations-example > .scrollsection > .item.-normal:nth-of-type(3n) {
+.scroll-animations > .scrollsection > .item.-normal:nth-of-type(3n) {
   bottom: 5vh;
 }
-.scroll-animations-example > .scrollsection > .item.-normal:nth-of-type(4n) {
+.scroll-animations > .scrollsection > .item.-normal:nth-of-type(4n) {
   bottom: -5vh;
 }
-.scroll-animations-example > .scrollsection > .item.-small {
+.scroll-animations > .scrollsection > .item.-small {
   height: 40vh;
   width: 30vh;
   z-index: 2;
 }
-.scroll-animations-example > .scrollsection > .item.-small.-horizontal {
+.scroll-animations > .scrollsection > .item.-small.-horizontal {
   height: 30vh;
   width: 40vh;
 }
-.scroll-animations-example > .scrollsection > .item.-small:nth-of-type(3n) {
+.scroll-animations > .scrollsection > .item.-small:nth-of-type(3n) {
   bottom: 13vh;
 }
-.scroll-animations-example > .scrollsection > .item.-small:nth-of-type(4n) {
+.scroll-animations > .scrollsection > .item.-small:nth-of-type(4n) {
   bottom: -13vh;
 }
-.scroll-animations-example > .scrollsection > .item > .image {
+.scroll-animations > .scrollsection > .item > .image {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -71,35 +71,35 @@ body {
   transform: translateX(0) translateY(0) scale(1);
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n) > .image {
+.scroll-animations > .scrollsection > .item:nth-of-type(4n) > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);
   transition-delay: 0;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 1) > .image {
   transform: translateX(30vh) translateY(30vh) scale(0.8);
   transition-delay: 0.05s;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 2) > .image {
   transform: translateX(-30vh) translateY(30vh) scale(0.8);
   transition-delay: 0.1s;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+.scroll-animations > .scrollsection > .item:nth-of-type(4n - 3) > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);
   transition-delay: 0.15s;
 }
-.scroll-animations-example > .scrollsection > .item > .image.-active {
+.scroll-animations > .scrollsection > .item > .image.-active {
   transform: translateX(0) translateY(0) scale(1);
   opacity: 0.8;
   pointer-events: auto;
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
 }
-.scroll-animations-example > .scrollsection > .item > .image.-clicked {
+.scroll-animations > .scrollsection > .item > .image.-clicked {
   transform: translateX(0) translateY(0) scale(5);
   opacity: 0;
   pointer-events: auto;
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
 }
-.scroll-animations-example > .scrollsection > .item > .image.-active:hover {
+.scroll-animations > .scrollsection > .item > .image.-active:hover {
   height: 100%;
   width: 100%;
   position: absolute;
