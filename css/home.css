@@ -14,6 +14,8 @@ body {
   display: inline-block;
   position: relative;
   margin: 0 -30vh 0 3vh;
+  height: 100%;
+  width: 100%;
 }
 .scroll-animations > .scrollsection > .item::before {
   content: '';
@@ -22,21 +24,21 @@ body {
   height: 100%;
 }
 .scroll-animations > .scrollsection > .item.-big {
-  height: 80vh;
-  width: 60vh;
+  max-height: 80vh;
+  max-width: 60vh;
 }
 .scroll-animations > .scrollsection > .item.-big.-horizontal {
-  height: 60vh;
-  width: 80vh;
+  max-height: 60vh;
+  max-width: 80vh;
 }
 .scroll-animations > .scrollsection > .item.-normal {
-  height: 60vh;
-  width: 45vh;
+  max-height: 60vh;
+  max-width: 45vh;
   z-index: 1;
 }
 .scroll-animations > .scrollsection > .item.-normal.-horizontal {
-  height: 45vh;
-  width: 60vh;
+  max-height: 45vh;
+  max-width: 60vh;
 }
 .scroll-animations > .scrollsection > .item.-normal:nth-of-type(3n) {
   bottom: 5vh;
@@ -45,13 +47,13 @@ body {
   bottom: -5vh;
 }
 .scroll-animations > .scrollsection > .item.-small {
-  height: 40vh;
-  width: 30vh;
+  max-height: 40vh;
+  max-width: 30vh;
   z-index: 2;
 }
 .scroll-animations > .scrollsection > .item.-small.-horizontal {
-  height: 30vh;
-  width: 40vh;
+  max-height: 30vh;
+  max-width: 40vh;
 }
 .scroll-animations > .scrollsection > .item.-small:nth-of-type(3n) {
   bottom: 13vh;
@@ -70,6 +72,8 @@ body {
   pointer-events: none;
   transform: translateX(0) translateY(0) scale(1);
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
+
+  object-fit: contain;
 }
 .scroll-animations > .scrollsection > .item:nth-of-type(4n) > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);
