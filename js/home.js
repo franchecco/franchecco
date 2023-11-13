@@ -1,4 +1,4 @@
-class Example {
+class Scroll {
   constructor(options) {
     this.root = options.root;
 
@@ -32,7 +32,7 @@ class Example {
 
 
 
-    this.images = this.root.querySelectorAll('.image');
+    this.images = this.root.querySelectorAll('.image-scroll');
 
     [].forEach.call(this.images, image => {
       image.addEventListener('click', () => {
@@ -60,7 +60,7 @@ class Example {
 
 
 window.addEventListener('DOMContentLoaded', event => {
-  const example = new Example({
+  const locoscroll = new Scroll({
     root: document.querySelector('.scroll-animations') });
 
 });
